@@ -8,7 +8,12 @@
     </button>
      <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item"> <a class=${pageContext.request.requestURI.substring(pageContext.request.requestURI.lastIndexOf("/")) eq '/about.jsp' ? ' active' : ''} aria-current="page" href="${pageContext.request.contextPath}/about.jsp">About</a> </li>
+            <li class="nav-item">
+                <a class="nav-link${pageContext.request.requestURI.substring(pageContext.request.requestURI.lastIndexOf('/')) eq '/about.jsp' ? ' active' : ''}" href="${pageContext.request.contextPath}/about.jsp">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link${pageContext.request.requestURI.substring(pageContext.request.requestURI.lastIndexOf('/')) eq '/Cars' ? ' active' : ''}" href="${pageContext.request.contextPath}/Cars">Cars</a>
+            </li>
             <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
             <li class="nav-item"> <a class="nav-link disabled" aria-disabled="true">Disabled</a> </li>
         </ul>
@@ -16,7 +21,6 @@
             <li class = "nav-item">
                 <a class = "nav-link" href="${pageContext.request.contextPath}/login">login</a>
             </li>
-        </ul>
         </ul>
      </div>
   </div>
@@ -28,9 +32,6 @@
         <p class="float-end">
             <a href="#">Back to top</a>
         </p>
-         <p>&copy; 2017–2025 Company, Inc. &middot;
-              =<a href="#">Privacy</a>   &middot;
-              <a href="#">Terms</a>
-        </p>
+        <p>&copy; 2026 Mihai Daniel Bozdoc.</p>
     </div>
 </footer>
