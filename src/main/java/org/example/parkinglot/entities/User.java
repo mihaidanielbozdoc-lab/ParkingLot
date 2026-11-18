@@ -2,7 +2,9 @@ package org.example.parkinglot.entities;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -24,7 +26,7 @@ public class User {
     private Long id;
 
     @OneToMany(mappedBy = "owner", orphanRemoval = true)
-    private Set<Car> cars = new LinkedHashSet<>();
+    private List<Car> cars = new ArrayList<>();
 
 
     public String getEmail() {
@@ -62,11 +64,11 @@ public class User {
     }
 
 
-    public Set<Car> getCars() {
+    public List<Car> getCars() {
         return cars;
     }
 
-    public void setCars(Set<Car> cars) {
+    public void setCars(List<Car> cars) {
         this.cars = cars;
     }
 
